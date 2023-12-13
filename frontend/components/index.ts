@@ -1,8 +1,7 @@
 import Nav from "./Nav";
-import Navbarr from "./Navbar";
-
+import Cards from "./Cards";
 
 export {
   Nav,
-  Navbarr,
+  Cards,
 };

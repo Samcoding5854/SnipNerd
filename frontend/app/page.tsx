@@ -1,6 +1,7 @@
 // pages/page.tsx
 import Image from 'next/image'
 import Link from 'next/link'
+import { Cards } from '@/components';
 
 export default function Home() {
   const subjects = ['subject1', 'subject2', 'subject3'];
@@ -14,6 +15,7 @@ export default function Home() {
           </Link>
         ))}
       </div> */}
+      <Cards/>
     </>
   )
 }

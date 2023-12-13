@@ -1,0 +1,73 @@
+.container{
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .card{
+    position: relative;
+    width: 300px;
+    height: 150px;
+    margin: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: linear-gradient(45deg,#1a2f3f, #7094ce);
+}
+
+.imgg{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100px;
+    width: 100px;
+    transition: 0.5s;
+}
+
+.container .card:hover .imgg{
+ left: 73%;
+ height: 150px;
+ width: 150px;
+}
+
+.container .card .content{
+    position: relative;
+    width: 50%;
+    left: 20%;
+    opacity: 0;
+    padding: 20px 20px 20px 40px;
+    transition: 0.5s;
+    visibility: hidden;
+}
+
+.container .card:hover .content{
+    left: 0%;
+    opacity: 1;
+    visibility: visible;
+}
+
+.container .card .subHead{
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.container .card .subPara{
+    color: #fff;
+    position:relative;
+
+}
+
+.container .card .subRead{
+    position: relative;
+    color: #111;
+    background: #fff;
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: 700;
+  white-space: nowrap; /* Added to prevent text wrapping */
+  overflow: hidden; /* Added to hide overflow content */
+  text-overflow: ellipsis;
+}
