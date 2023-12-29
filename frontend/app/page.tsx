@@ -1,21 +1,15 @@
-// pages/page.tsx
-import Image from 'next/image'
-import Link from 'next/link'
-import { Cards } from '@/components';
+import { Cards, Hero, SubjectCarousel} from '@/components'
+
+
 
 export default function Home() {
-  const subjects = ['subject1', 'subject2', 'subject3'];
-
   return (
     <>
-      {/* <div>
-        {subjects.map((slug) => (
-          <Link key={slug} href={`/subject/${slug}`}>
-            <button className='m-2'>Go to {slug}</button>
-          </Link>
-        ))}
-      </div> */}
-      <Cards/>
+    <Hero/>
+    <div className='flex m-3'>
+    <Cards title={'Physics'} description={"Physics studies nature's fundamental forces, matter, energy, and motion"} url={''}/>
+    </div>
+    <SubjectCarousel />
     </>
   )
 }

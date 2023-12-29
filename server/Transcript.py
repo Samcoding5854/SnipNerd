@@ -24,15 +24,14 @@ try:
         # Extract the transcripts as text
         subtitle_text = " ".join([entry["text"] for entry in transcripts])
 
-        # print("Transcripts:")
-        # print(subtitle_text)
+        print("Transcripts:")
+        print(subtitle_text)
     else:
         print("Transcripts not available for this video.")
 
 except Exception as e:
     print(f"An error occurred: {str(e)}")
 
-import requests
 
 
 # API_URL = "https://api-inference.huggingface.co/models/facebook/bart-large-cnn"
@@ -55,17 +54,17 @@ import requests
 # print(output)
 
 
-import requests
+# import requests
 
-API_URL = "https://api-inference.huggingface.co/models/distilgpt2"
-headers = {"Authorization": "Bearer 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"}
+# API_URL = "https://api-inference.huggingface.co/models/distilgpt2"
+# headers = {"Authorization": "Bearer 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"}
 
-def query(payload):
-	response = requests.post(API_URL, headers=headers, json=payload)
-	return response.json()
+# def query(payload):
+# 	response = requests.post(API_URL, headers=headers, json=payload)
+# 	return response.json()
 	
-output = query({
-	"inputs": "Do you work on APIs?",
-})
+# output = query({
+# 	"inputs": "Do you work on APIs?",
+# })
 
-print(output)
+# print(output)
