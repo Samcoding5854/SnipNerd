@@ -1,8 +1,11 @@
+import { TopicCard } from '@/components'
 import React from 'react'
 
 const page = () => {
   return (
-    <div className='text-white'>page</div>
+    <div className='text-white'>
+      <TopicCard />
+    </div>
   )
 }
 
