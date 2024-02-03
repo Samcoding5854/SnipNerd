@@ -5,6 +5,7 @@ import Hero from "./Hero";
 import SubjectCarousel from "./subjectCarousel";
 import Footer from "./Footer";
 import TopicCard from "./TopicCard";
+import { Editor } from "./text-editor";
 
 export {
   Nav,
@@ -14,4 +15,5 @@ export {
   SubjectCarousel,
   Footer,
   TopicCard,
+  Editor,
 };

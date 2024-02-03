@@ -1,3 +1,4 @@
+
 export default function Page({
     params,
 }: {
@@ -7,7 +8,7 @@ export default function Page({
 
   return(
     <>
-         <h1>this is {params.subjectId}</h1>
+         <h1></h1>
     </>
   )
 }
