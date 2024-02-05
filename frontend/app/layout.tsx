@@ -28,7 +28,10 @@ export default function RootLayout({
             }}
           >
             <Nav />
-            {children}
+             <div className="min-h-screen">
+              {children}
+            </div>
+            
             <Footer />
           </ClerkProvider>
         </Providers>
