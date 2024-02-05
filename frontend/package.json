@@ -9,8 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ckeditor/ckeditor5-build-classic": "^41.0.0",
+    "@ckeditor/ckeditor5-font": "ckeditor/ckeditor5-basic-styles",
+    "@ckeditor/ckeditor5-react": "^6.2.0",
     "@clerk/nextjs": "^4.29.5",
     "@clerk/themes": "^1.7.9",
+    "@google/generative-ai": "^0.2.0",
     "@lexical/react": "^0.12.5",
     "@nextui-org/react": "^2.2.9",
     "@sanity/image-url": "^1.0.2",

@@ -9,9 +9,6 @@ import { $createListItemNode, $createListNode } from "@lexical/list";
 export function textDailyStandup() {
     const root = $getRoot();
 
-    /**
-     * Today's Standup date
-     */
     const paragraphParent = $createParagraphNode();
     const currentDate = new Date();
     const todayStandupDate = format(currentDate, "ddMMyyyy");
@@ -20,13 +17,7 @@ export function textDailyStandup() {
     );
 
     const paragraphTwo = $createParagraphNode();
-    paragraphTwo.append($createTextNode("#focusing"));
-    const listForParagraphTwo = $createListNode("bullet");
-    listForParagraphTwo.append(
-        $createListItemNode().append(
-            $createTextNode(`..`)
-        )
-    );
+    paragraphTwo.append($createTextNode(""));
 
     const paragraphThree = $createParagraphNode();
     paragraphThree.append($createTextNode("#queue"));
@@ -46,12 +37,4 @@ export function textDailyStandup() {
         )
     );
 
-    /**
-     * Root
-     */
-    root.append(paragraphParent);
-    root.append(paragraphTwo);
-    root.append(listForParagraphTwo);
-    root.append(paragraphThree);
-    root.append(paragraphFour);
 }
