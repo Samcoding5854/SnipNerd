@@ -34,22 +34,38 @@ const MyForm: React.FC = () => {
   };
 
   return (
-    <div>
+    <div className="max-w-md mx-auto p-4 bg-black shadow-md rounded-md">
       <form onSubmit={handleSubmit}>
-        <label>
-          Name:
-          <input type="text" value={subject} onChange={(e) => setSubject(e.target.value)} />
-        </label>
-        <br />
-        <label>
-          Description:
-          <textarea value={description} onChange={(e) => setDescription(e.target.value)} />
-        </label>
-        <br />
-        <button type="submit">Submit</button>
+        <div className="mb-4">
+          <label className="block text-gray-700 text-sm font-bold mb-2">
+            Name:
+          </label>
+          <input
+            className="border rounded w-full py-2 px-3"
+            type="text"
+            value={subject}
+            onChange={(e) => setSubject(e.target.value)}
+          />
+        </div>
+        <div className="mb-4">
+          <label className="block text-gray-700 text-sm font-bold mb-2">
+            Description:
+          </label>
+          <textarea
+            className="border rounded w-full py-2 px-3"
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
+          />
+        </div>
+        <button
+          className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600"
+          type="submit"
+        >
+          Submit
+        </button>
       </form>
 
-      {error && <p>Error: {error}</p>}
+      {error && <p className="text-red-500 mt-4">Error: {error}</p>}
     </div>
   );
 };
