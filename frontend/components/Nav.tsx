@@ -65,11 +65,11 @@ const Nav = () => {
         <div className="flex items-center">
           <ThemeSwitcher />
           {isSignedIn ? (
-            <div className="flex gap-2">
-              <span className=" mx-2 font-semibold">{user}</span>
-              <button onClick={() => signOut(() => router.push("/"))}>
+            <div className="flex gap-2 items-center">
+              <span className=" mx-3 font-semibold">{user}</span>
+              <Button variant="bordered" className="font-medium" color="danger" onClick={() => signOut(() => router.push("/"))}>
                 Sign out
-              </button>
+              </Button>
             </div>
           ) : (
             <>
