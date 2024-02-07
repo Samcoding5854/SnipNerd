@@ -54,9 +54,9 @@ const Nav = () => {
           <a href="/bookmarks" className={styles.navLink}>
             Bookmarks
           </a>
-          <a href="/contactus" className={styles.navLink}>
+          <Link href="/ContactUs" className={styles.navLink}>
             Contact Us
-          </a>
+          </Link>
         </div>
         <div className="flex items-center">
           <ThemeSwitcher />
