@@ -5,25 +5,21 @@ import { Button, Link, ButtonGroup } from "@nextui-org/react";
 import { ThemeSwitcher } from ".";
 import Image from "next/image";
 import { useTheme } from "next-themes";
-import { SignOutButton, useClerk, useSession } from "@clerk/nextjs";
 import { useRouter } from "next/navigation";
 
 const Nav = () => {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
-  const { isLoaded, session, isSignedIn } = useSession();
-  const [user, setUser] = useState<any>(null);
-  const { signOut } = useClerk();
+
+  const [user, setUser] = useState<any>({
+    isSignedIn:false
+  });
   const router = useRouter()
 
   useEffect(() => {
     setMounted(true);
   }, []);
-  useEffect(() => {
-    if (isSignedIn && session) {
-      setUser(session?.user.firstName);
-    }
-  }, [session]);
+  
   if (!mounted) return null;
   return (
     <header className={`${styles.heady}`}>
@@ -64,7 +60,7 @@ const Nav = () => {
         </div>
         <div className="flex items-center">
           <ThemeSwitcher />
-          {isSignedIn ? (
+          {user.isSignedIn ? (
             <div className="flex gap-2 items-center">
               <span className=" mx-3 font-semibold">{user}</span>
               <Button variant="bordered" className="font-medium" color="danger" onClick={() => signOut(() => router.push("/"))}>
@@ -74,11 +70,11 @@ const Nav = () => {
           ) : (
             <>
               {" "}
-              <Link href="/login" color="warning" className="m-6">
+              <Link href="/auth/login" color="warning" className="m-6">
                 Login
               </Link>
               <Link
-                href="/signup"
+                href="/auth/signup"
                 className="bg-gradient-to-tr rounded-2xl p-1 px-2 from-pink-500 to-yellow-500 text-white shadow-lg"
               >
                 SignUp

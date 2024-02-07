@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+:root {
+    --ck-color-text: #007bff; /* Replace with your desired color */
+  }
+  
