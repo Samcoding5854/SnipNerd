@@ -1,0 +1,109 @@
+{
+
+    user: {
+  
+      id: 'e9014ed0-ca50-4445-94ef-5df5a5c55abd',
+  
+      aud: 'authenticated',
+  
+      role: 'authenticated',
+  
+      email: 'patul0153@gmail.com',
+  
+      email_confirmed_at: '2024-02-07T18:54:27.712255Z',
+  
+      phone: '',
+  
+      confirmed_at: '2024-02-07T18:54:27.712255Z',
+  
+      last_sign_in_at: '2024-02-07T19:10:12.849132Z',
+  
+      app_metadata: { provider: 'google', providers: [ 'google' ] },
+  
+      user_metadata: {
+  
+        avatar_url: 
+  
+          'https://lh3.googleusercontent.com/a/ACg8ocJPslIv2aT_MzQrw1PiIfB0M-az3KYGBoHihZLpy_TpKOc=s96-c',
+  
+        email: 'patul0153@gmail.com',
+  
+        email_verified: true,
+  
+        full_name: 'Atul Chaudhary',
+  
+        iss: 'https://accounts.google.com',
+  
+        name: 'Atul Chaudhary',
+  
+        phone_verified: false,
+  
+        picture: 
+  
+          'https://lh3.googleusercontent.com/a/ACg8ocJPslIv2aT_MzQrw1PiIfB0M-az3KYGBoHihZLpy_TpKOc=s96-c',
+  
+        provider_id: '111607717394942129917',
+  
+        sub: '111607717394942129917'
+  
+      },
+  
+      identities: [
+  
+        {
+  
+          identity_id: 'c1fc1861-151d-466b-abba-4d59dcd6e80b',
+  
+          id: '111607717394942129917',
+  
+          user_id: 'e9014ed0-ca50-4445-94ef-5df5a5c55abd',
+  
+          identity_data: {
+  
+            avatar_url: 
+  
+              'https://lh3.googleusercontent.com/a/ACg8ocJPslIv2aT_MzQrw1PiIfB0M-az3KYGBoHihZLpy_TpKOc=s96-c',
+  
+            email: 'patul0153@gmail.com',
+  
+            email_verified: true,
+  
+            full_name: 'Atul Chaudhary',
+  
+            iss: 'https://accounts.google.com',
+  
+            name: 'Atul Chaudhary',
+  
+            phone_verified: false,
+  
+            picture: 
+  
+              'https://lh3.googleusercontent.com/a/ACg8ocJPslIv2aT_MzQrw1PiIfB0M-az3KYGBoHihZLpy_TpKOc=s96-c',
+  
+            provider_id: '111607717394942129917',
+  
+            sub: '111607717394942129917'
+  
+          },
+  
+          provider: 'google',
+  
+          last_sign_in_at: '2024-02-07T18:54:27.708199Z',
+  
+          created_at: '2024-02-07T18:54:27.708265Z',
+  
+          updated_at: '2024-02-07T19:10:12.84694Z',
+  
+          email: 'patul0153@gmail.com'
+  
+        }
+  
+      ],
+  
+      created_at: '2024-02-07T18:54:27.701316Z',
+  
+      updated_at: '2024-02-07T19:10:12.850756Z'
+  
+    }
+  
+  }

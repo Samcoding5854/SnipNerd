@@ -1,25 +1,58 @@
 "use client";
 import styles from "../styles/Nav.module.css";
 import React, { useEffect, useState } from "react";
-import { Button, Link, ButtonGroup } from "@nextui-org/react";
+import { Button, Link, ButtonGroup, Avatar } from "@nextui-org/react";
 import { ThemeSwitcher } from ".";
 import Image from "next/image";
 import { useTheme } from "next-themes";
 import { useRouter } from "next/navigation";
+import { useRecoilState } from "recoil";
+import { userAtom } from "@/lib/useratom";
+import { supabase } from "@/lib/supabase";
 
 const Nav = () => {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
-
-  const [user, setUser] = useState<any>({
-    isSignedIn:false
-  });
-  const router = useRouter()
+  const [user, setUser] = useRecoilState(userAtom);
+  const router = useRouter();
 
   useEffect(() => {
     setMounted(true);
   }, []);
-  
+  useEffect(() => {
+    const fetchUser = async () => {
+      const { data } = await supabase.auth.getUser();
+      console.log(data);
+      if (data.user && data.user.email) {
+        // fetchTodos(data.user.id);
+        setUser({
+          isAuthenticated: true,
+          user: {
+            email: data.user.email,
+            name: data.user.user_metadata.full_name,
+            id: data.user.id,
+            avatar: data.user.user_metadata.avatar_url,
+          },
+        });
+      }
+    };
+    fetchUser();
+  }, []);
+
+  const signOut = async () => {
+    await supabase.auth.signOut();
+    setUser({
+      isAuthenticated: false,
+      user: {
+        avatar: "",
+        email: "",
+        name: "",
+        id: "",
+      },
+    });
+    router.push("/");
+  };
+
   if (!mounted) return null;
   return (
     <header className={`${styles.heady}`}>
@@ -60,10 +93,17 @@ const Nav = () => {
         </div>
         <div className="flex items-center">
           <ThemeSwitcher />
-          {user.isSignedIn ? (
+          {user.isAuthenticated ? (
             <div className="flex gap-2 items-center">
-              <span className=" mx-3 font-semibold">{user}</span>
-              <Button variant="bordered" className="font-medium" color="danger" onClick={() => signOut(() => router.push("/"))}>
+              <span className=" mx-3 font-semibold">
+                <Avatar src={user.user?.avatar} />
+              </span>
+              <Button
+                variant="bordered"
+                className="font-medium"
+                color="danger"
+                onClick={signOut}
+              >
                 Sign out
               </Button>
             </div>
