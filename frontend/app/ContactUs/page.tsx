@@ -1,7 +1,11 @@
 import { Button, Input, Textarea } from "@nextui-org/react";
 import { RiMailSendLine } from "react-icons/ri";
-import { IoLockClosedOutline } from "react-icons/io5";
+import { LuMailOpen } from "react-icons/lu";
 import { IoMailUnreadOutline } from "react-icons/io5";
+import { MdCall } from "react-icons/md";
+import { BiSupport } from "react-icons/bi";
+
+
 import { FaRegMessage } from "react-icons/fa6";
 import { TbPhoneCall } from "react-icons/tb";
 import React from "react";
@@ -50,6 +54,33 @@ const Page = () => {
       <Button className="mt-6 w-[400px]" color="primary">
         Send Message
       </Button>
+      <div className="flex justify-center gap-8 mt-8">
+        <div className="text-center">
+          <div className="items-center">
+          <LuMailOpen className="items-center" fontSize={70}/>
+          </div>
+         
+          <h2>Email us:</h2>
+          <p>Email us for general queries, including marketing and partnership opportunities.</p>
+          <a href="mailto:hello@flowbite.com">hello@flowbite.com</a>
+        </div>
+        <div className="text-center">
+          <div className="items-center">
+          <MdCall fontSize={70} className="items-center"/>
+          </div>
+          <h2>Call us:</h2>
+          <p>Call us to speak to a member of our team. We are always happy to help.</p>
+          <a href="tel:+16467865060">+1 (646) 786-5060</a>
+        </div>
+        <div className="text-center">
+         <div className="items-center">
+         <BiSupport fontSize={70} className="items-center"/>
+         </div>
+          <h2>Support:</h2>
+          <p>Email us for general queries, including marketing and partnership opportunities.</p>
+          <a href="/support-center">Support center</a>
+        </div>
+      </div>
     </div>
   );
 };
