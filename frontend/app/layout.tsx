@@ -20,9 +20,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Providers>
-          <div className="min-h-screen max-w-[2000px] m-auto">
+          <div className="max-w-[2000px] m-auto">
             <Nav />
-            {children}
+            <div className="min-h-screen">{children}</div>
             <Footer />
           </div>
         </Providers>
