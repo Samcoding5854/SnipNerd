@@ -3,6 +3,7 @@ import { RiMailSendLine } from "react-icons/ri";
 import { IoLockClosedOutline } from "react-icons/io5";
 import { FaLock } from "react-icons/fa";
 import React from "react";
+import Link from "next/link";
 
 const page = () => {
   return (
@@ -11,8 +12,12 @@ const page = () => {
         <div className="flex flex-col flex-1  max-w-[60%]">
           <div className="flex flex-col w-full flex-1">
             <div className="flex items-center  mx-auto gap-4 mt-[10%] ">
-              <h3 className=" text-sm font-medium opacity-60">Not a member?</h3>
-              <Button className="bg-blue-700">Sign up now</Button>
+              <h3 className=" text-sm font-medium opacity-60">
+                Already a member?
+              </h3>
+              <Link href={"/auth/login"}>
+                <Button className="bg-blue-700">Sign in now</Button>
+              </Link>
             </div>
             <div className="flex flex-col gap-3 items-center  ml-[5%] mt-[7%]">
               <div className="my-6">
@@ -26,7 +31,10 @@ const page = () => {
                 Username or Email
               </label>
               <div className="flex items-center gap-2 w-[60%]">
-                <RiMailSendLine fontSize={"30px"} className="block text-blue-600" />
+                <RiMailSendLine
+                  fontSize={"30px"}
+                  className="block text-blue-600"
+                />
                 <Input variant="underlined" className="bg-transparent inline" />
               </div>
               <label
@@ -39,10 +47,11 @@ const page = () => {
                 <IoLockClosedOutline fontSize={"30px"} className="block" />
                 <Input variant="underlined" className="bg-transparent inline" />
               </div>
-              <Button size="lg" className="bg-blue-700 mt-5">Sign in</Button>
+              <Button size="lg" className="bg-blue-700 mt-5">
+                Sign in
+              </Button>
             </div>
           </div>
-          
         </div>
         <div
           className="flex flex-col flex-1  items-center max-w-[50%]"

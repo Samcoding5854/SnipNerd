@@ -7,6 +7,7 @@ import { FaLock } from "react-icons/fa";
 import { TypeAnimation } from "react-type-animation";
 import React from "react";
 import { supabase } from "@/lib/supabase";
+import Link from "next/link";
 
 const page = () => {
   const signInWithGoogle = async () => {
@@ -59,7 +60,9 @@ const page = () => {
           <div className="flex flex-col w-full flex-1">
             <div className="flex items-center mx-auto gap-4 mt-[10%] ">
               <h3 className=" text-sm font-medium opacity-60">Not a member?</h3>
-              <Button className="bg-blue-700">Sign up now</Button>
+              <Link href={"/auth/signup"}>
+                <Button className="bg-blue-700">Sign up now</Button>
+              </Link>
             </div>
             <div className="flex flex-col gap-3 items-start ml-[5%] mt-[7%]">
               <div className="my-6">
@@ -98,7 +101,7 @@ const page = () => {
                   Sign in
                 </Button>
                 <Button
-                onPress={signInWithGoogle}
+                  onPress={signInWithGoogle}
                   size="lg"
                   className="bg-transparent border border-foreground"
                 >

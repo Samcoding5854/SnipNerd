@@ -19,6 +19,7 @@
     "@nextui-org/react": "^2.2.9",
     "@sanity/image-url": "^1.0.2",
     "@sanity/vision": "^3.23.4",
+    "@supabase/auth-helpers-nextjs": "^0.9.0",
     "@supabase/supabase-js": "^2.39.3",
     "@tinymce/tinymce-react": "^4.3.2",
     "add": "^2.0.6",
